@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  ruby:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - bundler:/data/bundle
+
+volumes:
+  bundler:
